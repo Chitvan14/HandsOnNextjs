@@ -9,7 +9,7 @@ import User from "@/models/userModel";
 import Link from "next/link";
 
 export default function ProfilePage() {
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = React.useState(true);
   const [data, setData] = React.useState<any>(null);
 
   const router = useRouter();

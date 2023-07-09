@@ -6,7 +6,8 @@ export function middleware(request: NextRequest) {
   const isPublic =
     pathname === "/login" ||
     pathname === "/signup" ||
-    pathname === "/verifyemail";
+    pathname === "/verifyemail" ||
+    pathname === "/";
 
   const isToken = request.cookies.get("token")?.value || "";
 
@@ -19,5 +20,12 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/", "/profile", "/login", "/signup", "/verifyemail","/password/[type]"],
+  matcher: [
+    "/",
+    "/profile",
+    "/login",
+    "/signup",
+    "/verifyemail",
+    "/password/[type]",
+  ],
 };
